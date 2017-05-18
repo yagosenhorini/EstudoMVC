@@ -1,0 +1,58 @@
+.fundo{
+	
+	background-color: olive;
+	margin-bottom: 20%
+	margin-top:20%;
+	padding: 2%;
+	text-align: center;
+}
+
+input {
+
+	border-style: solid;
+	border-color: gray;
+	border-width: 2px;
+	color: black;
+
+}
+
+h1{
+	color: black;
+}
+
+p{
+	color: white;
+}
+
+h3 {
+	
+	text-align: center;
+	color: black;	
+	font-family: arial-black;
+	font-size: 40px;
+
+}
+
+footer {
+
+	text-align: center;
+      color: white;
+      margin-top: 300px;
+     
+}
+
+label{
+	color: black;
+}
+
+    
+    .navbar {
+      margin-bottom: 0;
+      
+    }
+
+ .text-center{
+
+ 	text-align: center;
+
+ }
