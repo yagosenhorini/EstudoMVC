@@ -1,4 +1,4 @@
-package br.com.estudo.erro;
+package br.com.estudo.controller;
 
 import java.io.IOException;
 
@@ -12,26 +12,26 @@ import org.springframework.security.access.AccessDeniedException;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.web.access.AccessDeniedHandler;
+import org.springframework.stereotype.Component;
 
+@Component
 public class MeuAcessoNegado implements AccessDeniedHandler {
-	
+
 	private static Logger logger = LoggerFactory.getLogger(MeuAcessoNegado.class);
-	
+
 	@Override
-	public void handle(HttpServletRequest httpServletRequest,
-					   HttpServletResponse httpServletResponse, 
-					   AccessDeniedException e) throws IOException, ServletException{
-		
+	public void handle(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse,
+			AccessDeniedException e) throws IOException, ServletException {
+
 		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-		
-		if (auth!=null){
-			logger.info("Usuário '"+auth.getName()
-						+"' fez uma tentativa de acessar uma URL protegida: "
-						+httpServletRequest.getRequestURI()); 
-			
+
+		if (auth != null) {
+			logger.info("Usuário '" + auth.getName() + "' fez uma tentativa de acessar uma URL protegida: "
+					+ httpServletRequest.getRequestURI());
+
 		}
-		
-		httpServletResponse.sendRedirect(httpServletRequest.getContextPath()+ "/403");
+
+		httpServletResponse.sendRedirect(httpServletRequest.getContextPath() + "/403");
 	}
-	
+
 }

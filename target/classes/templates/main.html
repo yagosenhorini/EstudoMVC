@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Estudo de SpringBoot com Thymeleaf e Spring Security</title>
+
+<div th:replace="fragments/header :: header-css" />
+
+</head>
+
+<body>
+
+	<div th:replace="fragments/header :: header" />
+	<div class="container">
+		<div class="starter-template">
+			<h1>SpringBoot Web com Thymeleaf e Spring Security</h1>
+			<h2>1. Visite: <a th:href="@{/admin}">Página de Administrador
+					(Protegido pelo Spring Security. Precisa de permissão de
+					administrador)</a>
+			</h2>
+			<h2>2. Visite: <a th:href="@{/admin}">Página de Usuário (Protegido
+					pelo Spring Security. Precisa de permissão de usuário)</a>
+			</h2>
+			<h2>3. Visite: <a th:href="@{/admin}">Página normal</a>
+			</h2>
+		</div>
+
+	</div>
+
+<div th:replace="fragments/footer :: footer"/>
+
+</body>
+</html>

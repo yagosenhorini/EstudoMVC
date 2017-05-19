@@ -4,16 +4,16 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
-public class ControllerPadrao {
+public class DefaultController {
 
 	@GetMapping("/")
 	public String home1(){
-		return "/home";
+		return "/main";
 	}
 	
-	@GetMapping("/home")
+	@GetMapping("/main")
 	public String home2(){
-		return "/home";
+		return "/main";
 	}
 	
 	@GetMapping("/admin")
